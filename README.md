@@ -25,8 +25,8 @@
 
 ### **c. Таблица для п.5**
 
-[Table50](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table50.csv)
+![Table50](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table50.png)
 
-[Table75](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table75.csv)
+![Table75](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table75.png)
 
-[Table90](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table90.csv)
+![Table90](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table90.png)
