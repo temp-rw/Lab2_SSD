@@ -194,32 +194,39 @@ for Class in allClasses:
       dictClasses[Class][i][0] = matches/dictClasses[Class][i][2]
       dictClasses[Class][i][2] = dictClasses[Class][i][2] - matches
 
+
+
 for Class in allClasses:
   for i in range(3):
     matches = dictClasses[Class][i][0]
     if matches>0:
-      dictClasses[Class][i][0] = matches*100
+      dictClasses[Class][i][0] = matches * 100
 
 allClasses = sorted(allClasses)
 
-list50 = [dictClasses[Class][0] for Class in allClasses]
-list75 = [dictClasses[Class][1] for Class in allClasses]
-list90 = [dictClasses[Class][2] for Class in allClasses]
+AimClasses = ["bicycle", "car", "truck", "person", "bus"]
+
+list50 = [dictClasses[Class][0] for Class in AimClasses]
+list75 = [dictClasses[Class][1] for Class in AimClasses]
+list90 = [dictClasses[Class][2] for Class in AimClasses]
+for index, Class in enumerate(AimClasses):
+    if Class == 'person' : AimClasses[index] = 'people'
+
 
 pd.options.display.float_format = '{:,.4f}'.format
 pd.set_option('display.max_rows', 50)
-ClasswiseStat50 = pd.DataFrame(list50, columns=['Точность','Ложных тревог','Пропущено'], index=allClasses)
-ClasswiseStat75 = pd.DataFrame(list75, columns=['Точность','Ложных тревог','Пропущено'], index=allClasses)
-ClasswiseStat90 = pd.DataFrame(list90, columns=['Точность','Ложных тревог','Пропущено'], index=allClasses)
+ClasswiseStat50 = pd.DataFrame(list50, columns=['Accuracy','False Alarm','Missed'], index=AimClasses)
+ClasswiseStat75 = pd.DataFrame(list75, columns=['Accuracy','False Alarm','Missed'], index=AimClasses)
+ClasswiseStat90 = pd.DataFrame(list90, columns=['Accuracy','False Alarm','Missed'], index=AimClasses)
 
 import matplotlib.pyplot as plt
 import pandas as pd
 from pandas.plotting import table
 
-ax = plt.subplot(111, frame_on=False)
-ax.xaxis.set_visible(False) 
-ax.yaxis.set_visible(False)  
-table(ax, ClasswiseStat90)  
-plt.savefig('mytable.png')
+ax = plt.subplot(111, frame_on=True)
+ax.xaxis.set_visible(False)
+ax.yaxis.set_visible(False)
 
-
+ClasswiseStat50.to_csv('Table50.csv', index=False, sep=';')
+ClasswiseStat75.to_csv('Table75.csv', index=False, sep=';')
+ClasswiseStat90.to_csv('Table90.csv', index=False, sep=';')
