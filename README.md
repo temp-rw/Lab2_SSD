@@ -20,13 +20,18 @@
 ![image4](https://github.com/temp-rw/Lab2_SSD/blob/master/Images/Pic4.png)
 
 ### **b. Таблица для п.4**
+Средняя точность детектирования объектов, количество пропущенных объектов,\
+количество ложных тревог для порогов IoU = 0.5, 0.75, 0.9
 
 ![IoU](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/IoU.png)
 
 ### **c. Таблица для п.5**
+Средняя точность детектирования объектов, количество пропущенных объектов,\
+количество ложных тревог для каждого класса для порогов IoU = 0.5, 0.75, 0.9
 
+1. IoU = 0.5\
 ![Table50](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table50.png)
-
+2. IoU = 0.75\
 ![Table75](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table75.png)
-
+3. IoU = 0.9\
 ![Table90](https://github.com/temp-rw/Lab2_SSD/blob/master/Tables/Table90.png)
